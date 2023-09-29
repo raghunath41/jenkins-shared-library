@@ -5,7 +5,7 @@ pipeline
         label 'Docker_agent'
     }
 
-    Environment {
+    environment {
         GIT_BRANCH = "${git_branch}"
         GIT_CREDS = "${git_credentials}"
         GIT_URL = "${git_url}"
