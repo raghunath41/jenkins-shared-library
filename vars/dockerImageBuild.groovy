@@ -10,6 +10,8 @@ def call(String dockerfile = "Dockerfile",
                 imageBuild.push()
                }
 
-               sh 'docker images'
+               sh ''' docker images
+                      docker image prune -f
+                      docker rmi ${image_name}:${image_tag} '''
 
          }
